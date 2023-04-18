@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Item {
-    var done:Bool = true
+class Item : Codable {
     var title:String = ""
+    var done:Bool = false
 
 }
