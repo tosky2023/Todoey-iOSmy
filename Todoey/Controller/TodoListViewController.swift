@@ -5,7 +5,7 @@ import CoreData
 class TodoListViewController: UITableViewController {
     
     var itemArray = [Item]()
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Data model")
+//    let dataFilePath = .first?.appendingPathComponent("Data model")
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     
@@ -14,10 +14,9 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
        
         
-        print(dataFilePath!)
-                
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
 
-//        searchBar.delegate = self
         loadItems()
     }
     
